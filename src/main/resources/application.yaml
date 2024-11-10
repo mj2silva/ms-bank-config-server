@@ -17,6 +17,20 @@ spring:
           search-paths: '\{application}'
   kafka:
     bootstrap-servers: http://localhost:9092
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
 encrypt:
   # Key for local development only
   key: 'yDZhY6kpLdUsrsERvWB24FRyYhARxjoz'

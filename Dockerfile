@@ -16,7 +16,7 @@ RUN mvn clean package -DskipTests
 
 # Get project dependencies
 RUN mkdir ./target/extracted
-RUN unzip  ./target/accounts-0.0.1-SNAPSHOT.jar -d ./target/extracted
+RUN unzip  ./target/config-server-0.0.1-SNAPSHOT.jar -d ./target/extracted
 
 RUN jdeps --ignore-missing-deps -q  \
     --recursive  \
