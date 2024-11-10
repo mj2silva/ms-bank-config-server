@@ -9,7 +9,7 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:mj2silva/ms-bank-config.git
+          uri: https://github.com/mj2silva/ms-bank-config.git
           default-label: main
           timeout: 5
           clone-on-start: true
