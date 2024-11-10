@@ -32,7 +32,7 @@ COPY --from=jar-build /app/deps.info /opt/app/
 
 # Create a custom Java runtime
 RUN $JAVA_HOME/bin/jlink \
-         --add-modules $(cat /opt/app/deps.info) \
+         --add-modules jdk.crypto.ec,$(cat /opt/app/deps.info) \
          --strip-debug \
          --no-man-pages \
          --no-header-files \
